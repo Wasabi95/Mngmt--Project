@@ -64,7 +64,7 @@ export default function Edit() {
       },
     });
 
-    navigate("/");
+    navigate("/recordList");
   }
 
   // This following section will display the form that takes input from the user to update the data.

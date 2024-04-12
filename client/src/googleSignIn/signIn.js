@@ -136,8 +136,16 @@ function SignIn() {
                         Employee Management <span className="text-info font-bold">Systems</span>
                       </h2>
                       <h2 className="text-2xl text-white font-bold mb-2">
-                        Wasabi <span className="text-info font-bold">TECHNOLOGIES</span>
-                      </h2>
+                      <div className="navbar-brand" to="/">
+          <img
+            style={{ width: "10%", marginLeft: "20px" }}
+            src="https://raw.githubusercontent.com/Wasabi95/NavBar-SideMenu/master/images/cc.png"
+            alt="logo"
+          ></img>
+            Wasabi <span className="text-info font-bold">TECHNOLOGIES</span>
+                     
+        </div>
+        </h2>
                     </div>
                   </div>
                   <div className='mt-4 text-xs' style={{ color: "red" }}>
