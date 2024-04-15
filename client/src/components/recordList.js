@@ -85,24 +85,27 @@ export default function RecordList() {
 
   return (
     
+    
     <div className="tablex" style={{ margin: "20px" }}>
         <Navbar />
       <div className="d-flex justify-content-evenly align-items-center mb-3">
         <h3>Employee List</h3>
         <NavLink className="nav-link btn btn-primary" to="/create">
-          <h3>Create Registry</h3>
+        <button className="btn btn-success" >Create Registry</button>
         </NavLink>
         {/* Add logout button */}
-        <button onClick={logout}>Logout</button>
+        <button className="btn btn-primary" onClick={logout}>Logout</button>
       </div>
-      <div className="mb-3">
-        <input
-          type="text"
-          placeholder="Buscar..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
+      <div className="mb-3" style={{ maxWidth: '300px' }}>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Buscar..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+    </div>
+
       {error ? (
         <div>Error: {error}</div>
       ) : (
