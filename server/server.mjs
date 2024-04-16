@@ -54,7 +54,7 @@ app.use("/record", records);
 // Modify the server's listen method to bind to both IPv4 and IPv6 addresses
 const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port: ${PORT}`);
-    console.log('Server is now running and ready to accept requests.');
+    console.log('Server is now up and running and ready to accept requests.');
 });
 
 app.get('/', (req, res) => {
