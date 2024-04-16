@@ -29,10 +29,10 @@ import records from "./routes/record.mjs";
 import compress from 'compression';
 
 const PORT = process.env.PORT || 5050;
-const ATLAS_URI = "mongodb+srv://andycarsan10:Wasabito1223%24@cluster0.ctpki0b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const ATLAS_URI = process.env.ATLAS_URI;
 const app = express();
 
-app.use(cors());
+app.use( cors({ "origin": "*", }) );
 app.use(express.json());
 app.use(compress());
 if(process.env.NODE_ENV === 'production') {
