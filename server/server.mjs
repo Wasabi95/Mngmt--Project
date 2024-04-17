@@ -37,7 +37,6 @@ import path from 'path';
 dotenv.config();
 // Retrieve environment variables
 const PORT = process.env.PORT || 5050;
-const ATLAS_URI = process.env.ATLAS_URI;
 const app = express();
 
 const _dirname=path.dirname("")
