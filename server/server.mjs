@@ -23,6 +23,7 @@
 
 
 //server.mjs
+
 import dotenv from 'dotenv';
 import express from "express";
 import cors from "cors";
@@ -30,6 +31,8 @@ import helmet from "helmet";
 import "./loadEnvironment.mjs";
 import records from "./routes/record.mjs";
 import compress from 'compression';
+import path from 'path';
+
 
 dotenv.config();
 // Retrieve environment variables
@@ -37,7 +40,14 @@ const PORT = process.env.PORT || 5050;
 const ATLAS_URI = process.env.ATLAS_URI;
 const app = express();
 
-app.use(cors());
+const _dirname=path.dirname("")
+const buildpath = path.join(_dirname,"../client/build")
+app.use(express.static(buildpath));
+app.use(
+    cors({
+      "origin": "*",
+    })
+  );
 app.use(express.json());
 app.use(compress());
 if(process.env.NODE_ENV === 'production') {
